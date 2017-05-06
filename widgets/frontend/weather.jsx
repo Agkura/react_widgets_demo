@@ -11,7 +11,6 @@ class Weather extends React.Component{
     navigator.geolocation.getCurrentPosition((position)=>{
       let lon = position.coords.longitude;
       let lat = position.coords.latitude;
-      console.log(lon, lat);
       let request = new XMLHttpRequest();
       request.open('GET',
        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=c9d002923ca54918d0f7bb419fa9c202`,
